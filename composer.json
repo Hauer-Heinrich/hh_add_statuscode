@@ -1,0 +1,42 @@
+{
+    "name": "hauerheinrich/hh-add-statuscode",
+    "type": "typo3-cms-extension",
+    "description": "Hauer-Heinrich - add statuscode select box for page type redirect/shortcut (e. g. 301, 302 etc)",
+    "authors": [
+        {
+            "name": "Christian Hackl",
+            "email": "info@hauer-heinrich.de",
+            "homepage": "http://www.hauer-heinrich.de",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/Hauer-Heinrich/hh_add_statuscode/issues",
+        "source": "https://github.com/Hauer-Heinrich/hh_add_statuscode",
+        "docs": "https://github.com/Hauer-Heinrich/hh_add_statuscode/blob/master/README.md"
+    },
+    "version": "0.1.0",
+    "license": ["GPL-2.0-or-later"],
+    "keywords": [
+        "TYPO3 CMS",
+        "extension",
+        "hauer-heinrich"
+    ],
+    "replace": {
+        "hauer-heinrich/hh_add_statuscode": "self.version",
+        "typo3-ter/hh-add-statuscode": "self.version"
+    },
+    "require": {
+        "typo3/cms-core": "^8.7.0 || ^10.2.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "HauerHeinrich\\HhAddStatuscode\\": "Classes"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "hh_add_statuscode"
+        }
+    }
+}
