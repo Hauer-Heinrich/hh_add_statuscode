@@ -4,7 +4,6 @@ Adds statuscode (e. g. 301, 302 etc) select box for page type redirect/shortcut 
 
 ### Installation
 ... like any other TYPO3 extension [extensions.typo3.org](https://extensions.typo3.org/ "TYPO3 Extension Repository")
-Don't forget to include PageTS / look at features section
 
 
 ![example picture from backend](github/images/preview.jpg?raw=true "Title")
