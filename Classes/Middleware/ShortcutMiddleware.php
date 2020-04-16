@@ -47,16 +47,7 @@ class ShortcutMiddleware implements MiddlewareInterface {
         if ($redirectToUri !== null && $redirectToUri !== (string)$request->getUri() && $this->controller->getRedirectUriForShortcut($request) !== null) {
 
             // Get sourcePage - the redirect page not the destination
-            // check witch TYPO3 version
-            // TODO: constant TYPO3_branch Deprecation
-            // https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/10.3/Deprecation-90007-GlobalConstantsTYPO3_versionAndTYPO3_branch.html
-            $TYPO3version = \TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionNumberToInteger(TYPO3_branch) >= \TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionNumberToInteger('10');
-            if ($TYPO3version) { // >= 10
-                $pageRepository = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Domain\Repository\PageRepository::class);
-            } else {
-                $pageRepository = GeneralUtility::makeInstance(\TYPO3\CMS\Frontend\Page\PageRepository::class);
-            }
-
+            $pageRepository = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Domain\Repository\PageRepository::class);
             $sourcePage = $pageRepository->getPage($this->controller->getRequestedId());
             if($sourcePage['status_code'] > 0) {
                 return new RedirectResponse($redirectToUri, $sourcePage['status_code']);

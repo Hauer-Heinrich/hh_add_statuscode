@@ -18,10 +18,10 @@ $EM_CONF['hh_add_statuscode'] = [
     'author_email' => 'chackl@hauer-heinrich.de',
     'author_company' => 'www.hauer-heinrich.de',
     'state' => 'stable',
-    'version' => '0.1.1',
+    'version' => '0.1.2',
     'constraints' => [
         'depends' => [
-            'typo3' => '8.7.0-10.2.2'
+            'typo3' => '10.3.0-10.4.99'
         ],
         'conflicts' => [
         ],

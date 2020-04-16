@@ -15,7 +15,7 @@
         "source": "https://github.com/Hauer-Heinrich/hh_add_statuscode",
         "docs": "https://github.com/Hauer-Heinrich/hh_add_statuscode/blob/master/README.md"
     },
-    "version": "0.1.1",
+    "version": "0.1.2",
     "license": ["GPL-2.0-or-later"],
     "keywords": [
         "TYPO3 CMS",
@@ -27,7 +27,7 @@
         "typo3-ter/hh-add-statuscode": "self.version"
     },
     "require": {
-        "typo3/cms-core": ">=8.7.0 <=10.2.2"
+        "typo3/cms-core": ">=10.3.0 <= 10.4.99"
     },
     "autoload": {
         "psr-4": {
